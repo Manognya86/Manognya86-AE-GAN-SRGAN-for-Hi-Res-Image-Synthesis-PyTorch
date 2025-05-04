@@ -1,0 +1,70 @@
+# Install Python
+Python Version 3.11
+
+# Install dependencies
+pip install -r requirements.txt
+
+#Dataset
+One dataset that we have used in the project is stored in the folder "dataset". Since the dataset is too large we cannot upload everything hence providing the link of where we collected it from.
+
+#Epoch trained
+All the trained epoch is stored in the folder called "models".
+
+#Verification
+All the fake/real sample identified by the model are stored in folder called "output".
+
+#Final trained result
+All the final approved and best performed epochs are stored in folder called "results".
+
+#Frontend
+All the frontend HTML template are stored in folder called "templates"
+
+
+#Starting the Local Host
+python deploy.py 
+You will get the local host link in your VS code terminal (CTRL + Follow link) to open the web application
+
+You will see the Start page 
+Click on Proceed button
+You will be redirected to Login page 
+Username: admin
+Password: admin123  # you can use this to access the web application with admin role 
+
+OR
+
+You can create a new account through register button
+
+- On the top left you will have Upload image button through which you can browse the image you want to enhance. Select it and upload
+- Click on Enhance Image button for the AEGAN to enhance your image
+- You can download the enhanced image by clicking on Save Image Button
+- You can clear all the upload by clicking on Destroy All button
+- You can provide the feedback to the model for future training
+
+- You can see the history of the image upload at the bottom of the page
+
+- You can logout the webpage by clicking on Exit button
+
+In the terminal of VS code you can see the real time logging of the model
+
+To view the feedback as admin or data scientist you can open the following link
+http://localhost:5000/debug/feedbacks
+
+To Download the feedback of users as CSV file only as admin or data scientist open the following link after logging in as admin/data scientist
+http://localhost:5000/api/feedback?export=csv
+
+
+#Evaluate the model
+python evaluate_model.py --dataset flowers --dataroot "D:/project/AEGAN/dataset/flowers" --real "D:/project/AEGAN/imgStep1/real_samples.png" --generated "D:/project/AEGAN/output/imgStep1" --log_name training.log --imageSize 64 
+
+OR(Path based on where you save the folder)
+
+python evaluate_model.py --dataset (Dataset_name) --dataroot (Dataset_path) --real (Real_Image_Path) --generated (Generated_Image_Path) --log_name training.log --imageSize 64
+
+You will see a folder created called record which will have all the evaluation of neural network
+
+
+#Database Entries
+To view all the database entries there is a file called aegan.db which has real time database update of all the new/old usernames along with the passwords, time of creation.
+
+#Logging
+To view all the logging there is a file called aegan.log which has all the historic and the real time log of the project

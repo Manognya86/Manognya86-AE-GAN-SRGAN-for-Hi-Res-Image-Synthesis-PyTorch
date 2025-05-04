@@ -1,0 +1,32 @@
+# Large binaries
+Lib/
+Library/
+calculate_FID/
+
+# Python packages
+*.dll
+*.so
+*.pb
+*.lib
+# Python
+__pycache__/
+*.py[cod]
+env/
+
+
+# Data/Models
+checkspoints/
+processed/
+var/
+distattributes/
+uploads/
+*.pth
+*.h5
+*.bin
+
+# IDE
+.idea/
+.vscode/
+
+# Logs
+*.log

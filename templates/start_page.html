@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team R2D2 - AEGAN</title>
+  <base href="/">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url("{{ url_for('static', filename='starwarsback.jpg') }}");
+      background-size: cover;
+    }
+
+    .backdrop {
+      background-color: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(4px);
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .fade-in {
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="backdrop fade-in">
+    <h1 class="text-5xl font-bold text-blue-400 mb-4 drop-shadow-lg">R2-D2</h1>
+    <h2 class="text-2xl text-gray-300 mb-6 tracking-widest">Project: AEGAN</h2>
+    <p class="text-sm text-gray-400 mb-8">Initializing rebel system access...</p>
+    <a href="{{ url_for('login_page') }}" class="inline-block bg-blue-500 hover:bg-blue-400 text-white font-semibold px-6 py-2 rounded-md transition">
+      Proceed to Login
+    </a>
+  </div>
+</body>
+</html>

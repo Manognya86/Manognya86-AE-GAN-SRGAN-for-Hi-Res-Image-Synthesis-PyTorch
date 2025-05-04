@@ -1,0 +1,5 @@
+# create_favicon.py
+from PIL import Image
+
+img = Image.new('RGB', (16, 16), color='black')
+img.save('static/favicon.ico', format='ICO')
