@@ -7,7 +7,7 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.13.1%2B-orange)](https://pytorch.org)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-A deep learning system that transforms low-resolution images into high-quality outputs (up to 512x512) using a two-stage GAN architecture. Developed by **Team R2D2** for **CIS 579 - Artificial Intelligence**.
+A deep learning system that transforms low-resolution images into high-quality outputs (up to 512x512) using a two-stage GAN architecture. Developed by **Team R2D2** for the course **CIS 579 - Artificial Intelligence**.
 
 ---
 
