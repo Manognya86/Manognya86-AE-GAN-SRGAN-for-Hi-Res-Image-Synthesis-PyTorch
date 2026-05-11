@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify, redirect, url_for, s
 from flask_jwt_extended import JWTManager, jwt_required, get_jwt_identity, unset_jwt_cookies, get_jwt, verify_jwt_in_request
 from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash
+
 import os
 import logging
 from datetime import datetime, timedelta
